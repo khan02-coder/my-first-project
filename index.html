@@ -69,12 +69,12 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.6vw,38px);l
 .service li{margin-bottom:6px}
 .service li::marker{color:var(--blue)}
 
-.work{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:stretch}
+.work{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
 .card{background:var(--white);border:2px solid var(--ink);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
 .card-text{padding:18px 20px 22px}
 .card-text h3{font-family:var(--display);font-size:20px;margin:0 0 4px}
 .card-text p{margin:0;color:var(--muted);font-size:15px}
-.card.next{border-style:dashed;border-color:var(--muted);background:transparent;justify-content:center}
+.card.next{grid-column:1/-1;border-style:dashed;border-color:var(--muted);background:transparent;justify-content:center}
 .card.next .card-text{padding:28px 24px}
 .card.next a{display:inline-block;margin-top:14px;font-weight:600;color:var(--blue-dark);text-underline-offset:4px}
 .card svg{display:block;width:100%;height:auto;border-bottom:2px solid var(--ink);background:#EEF2F8}
@@ -105,6 +105,12 @@ footer{padding:0 0 40px;color:var(--muted);font-size:14px}
 @media (max-width:480px){
   .steps{grid-template-columns:1fr}
 }
+.card-text a{display:inline-block;margin-top:14px;font-weight:600;color:var(--blue-dark);text-underline-offset:4px}
+.card-text a:hover{color:var(--ink)}
+.card > a{display:block}
+.float{animation:floaty 3.4s ease-in-out infinite}
+@keyframes floaty{50%{transform:translateY(-9px)}}
+@media (prefers-reduced-motion:reduce){.float{animation:none}}
 </style>
 </head>
 <body>
@@ -177,7 +183,7 @@ footer{padding:0 0 40px;color:var(--muted);font-size:14px}
 
     <section id="work">
       <h2>Work</h2>
-      <p class="sub">A first sample, and more on the way as I finish new projects.</p>
+      <p class="sub">Two samples so far, and more on the way as I finish new projects.</p>
       <div class="work">
         <div class="card">
           <svg viewBox="0 0 680 340" role="img" aria-label="Three balls bouncing and squashing as they hit the ground" xmlns="http://www.w3.org/2000/svg">
@@ -193,6 +199,35 @@ footer{padding:0 0 40px;color:var(--muted);font-size:14px}
           <div class="card-text">
             <h3>Bouncing balls animation</h3>
             <p>A small animation built with SVG code. The balls speed up as they fall and squash when they land.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a href="https://khan02-coder.github.io/stackd-restaurant/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="680" height="340" fill="#1633D6"/>
+              <text x="36" y="62" font-family="Bricolage Grotesque, Segoe UI, sans-serif" font-weight="700" font-size="30" fill="#FFF4E0">Stackd</text>
+              <text x="132" y="62" font-family="Bricolage Grotesque, Segoe UI, sans-serif" font-weight="700" font-size="30" fill="#FFD23F">.</text>
+              <ellipse cx="340" cy="290" rx="120" ry="10" fill="#0A1146" opacity="0.35"/>
+              <g class="float">
+                <path d="M246 150 C246 84 434 84 434 150 Z" fill="#E39B3C"/>
+                <ellipse cx="300" cy="118" rx="6" ry="2.6" fill="#FFF1D0" transform="rotate(-20 300 118)"/>
+                <ellipse cx="338" cy="104" rx="6" ry="2.6" fill="#FFF1D0"/>
+                <ellipse cx="378" cy="118" rx="6" ry="2.6" fill="#FFF1D0" transform="rotate(20 378 118)"/>
+                <ellipse cx="320" cy="132" rx="6" ry="2.6" fill="#FFF1D0" transform="rotate(-10 320 132)"/>
+                <ellipse cx="360" cy="134" rx="6" ry="2.6" fill="#FFF1D0" transform="rotate(10 360 134)"/>
+                <rect x="256" y="150" width="168" height="9" rx="4.5" fill="#E8501F"/>
+                <path d="M244 160 H436 L424 184 L410 170 H270 L256 184 Z" fill="#FFC21A"/>
+                <rect x="248" y="166" width="184" height="26" rx="13" fill="#4A2817"/>
+                <rect x="252" y="188" width="176" height="15" rx="7.5" fill="#E23B2A"/>
+                <path d="M240 202 q12 -14 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 v9 h-192 z" fill="#6CC04A"/>
+                <rect x="250" y="208" width="180" height="38" rx="19" fill="#E9A94B"/>
+              </g>
+            </svg>
+          </a>
+          <div class="card-text">
+            <h3>Stackd restaurant website</h3>
+            <p>A sample site for a burger restaurant, with a 3D burger that comes apart as you scroll, a menu, deals, and ordering by WhatsApp.</p>
+            <a href="https://khan02-coder.github.io/stackd-restaurant/" target="_blank" rel="noopener">View live site</a>
           </div>
         </div>
         <div class="card next">
