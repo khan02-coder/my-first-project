@@ -112,7 +112,10 @@ footer{padding:0 0 40px;color:var(--muted);font-size:14px}
 .card.wide > a{flex:1.35;min-width:0}
 .card.wide svg{height:100%;border-bottom:0;border-right:2px solid var(--ink)}
 .card.wide .card-text{flex:1;display:flex;flex-direction:column;justify-content:center;padding:28px}
-@media (max-width:820px){.card.wide{flex-direction:column}.card.wide svg{height:auto;border-right:0;border-bottom:2px solid var(--ink)}}
+.card.wide.flip{flex-direction:row-reverse}
+.card.wide.flip svg{border-right:0;border-left:2px solid var(--ink)}
+.links{display:flex;gap:20px;flex-wrap:wrap}
+@media (max-width:820px){.card.wide,.card.wide.flip{flex-direction:column}.card.wide svg,.card.wide.flip svg{height:auto;border-right:0;border-left:0;border-bottom:2px solid var(--ink)}}
 .float{animation:floaty 3.4s ease-in-out infinite}
 @keyframes floaty{50%{transform:translateY(-9px)}}
 @media (prefers-reduced-motion:reduce){.float{animation:none}}
@@ -188,7 +191,7 @@ footer{padding:0 0 40px;color:var(--muted);font-size:14px}
 
     <section id="work">
       <h2>Work</h2>
-      <p class="sub">Three samples so far, and more on the way as I finish new projects.</p>
+      <p class="sub">Four samples so far, and more on the way as I finish new projects.</p>
       <div class="work">
         <div class="card">
           <svg viewBox="0 0 680 340" role="img" aria-label="Three balls bouncing and squashing as they hit the ground" xmlns="http://www.w3.org/2000/svg">
@@ -243,6 +246,16 @@ footer{padding:0 0 40px;color:var(--muted);font-size:14px}
             <h3>EXPLORE 2077</h3>
             <p>A cinematic website set in the year 2077. It has a 3D neon city, three explorable destinations, working AI and transport demos, hidden discoveries to find, and a generator that designs your future.</p>
             <a href="https://khan02-coder.github.io/explore-2077/" target="_blank" rel="noopener">View live site</a>
+          </div>
+        </div>
+        <div class="card wide flip">
+          <a href="https://khan02-coder.github.io/studykit/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <svg viewBox="0 0 680 340" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="680" height="340" fill="#E8EDF8"/><rect x="36" y="34" width="304" height="272" rx="6" fill="#FBFCFF" stroke="#D3DDF5" stroke-width="2"/><rect x="80" y="34" width="2" height="272" fill="#F29AAE"/><circle cx="56" cy="70" r="6" fill="#E8EDF8"/><circle cx="56" cy="120" r="6" fill="#E8EDF8"/><circle cx="56" cy="170" r="6" fill="#E8EDF8"/><circle cx="56" cy="220" r="6" fill="#E8EDF8"/><circle cx="56" cy="270" r="6" fill="#E8EDF8"/><rect x="94" y="52" width="150" height="12" fill="#FFE15A"/><text x="96" y="64" font-family="Georgia, serif" font-weight="700" font-size="18" fill="#16224A">GPA calculator</text><text x="96" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#16224A">Data Structures</text><text x="232" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#58638A">4</text><text x="272" y="100" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#2447D8">A</text><line x1="94" x2="324" y1="110" y2="110" stroke="#D3DDF5" stroke-width="2"/><text x="96" y="134" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#16224A">Linear Algebra</text><text x="232" y="134" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#58638A">3</text><text x="272" y="134" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#2447D8">B+</text><line x1="94" x2="324" y1="144" y2="144" stroke="#D3DDF5" stroke-width="2"/><text x="96" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#16224A">Database Systems</text><text x="232" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#58638A">3</text><text x="272" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#2447D8">A-</text><line x1="94" x2="324" y1="178" y2="178" stroke="#D3DDF5" stroke-width="2"/><text x="96" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#58638A">Cumulative GPA</text><text x="94" y="276" font-family="Georgia, serif" font-weight="700" font-size="52" fill="#16224A">3.60</text><g transform="rotate(4 440 118)"><rect x="368" y="46" width="146" height="146" fill="#FFE97A"/><circle cx="441" cy="112" r="40" fill="none" stroke="rgba(43,35,0,.18)" stroke-width="8"/><circle cx="441" cy="112" r="40" fill="none" stroke="#2B2300" stroke-width="8" stroke-linecap="round" stroke-dasharray="188 251" transform="rotate(-90 441 112)"/><text x="441" y="119" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="22" fill="#2B2300">25:00</text><text x="441" y="178" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#2B2300">Focus timer</text></g><text x="540" y="92" font-family="Georgia, serif" font-weight="700" font-size="30" fill="#16224A">StudyKit</text><rect x="540" y="102" width="70" height="4" fill="#FFE15A"/><rect x="360" y="214" width="290" height="94" rx="8" fill="#FBFCFF" stroke="#D3DDF5" stroke-width="2"/><rect x="360" y="214" width="290" height="6" rx="3" fill="#F29AAE"/><rect x="376" y="232" width="14" height="14" rx="3" fill="none" stroke="#2447D8" stroke-width="2"/><text x="400" y="244" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#16224A">Data structures assignment</text><text x="400" y="257" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#8F5A00">Due tomorrow</text><rect x="376" y="262" width="14" height="14" rx="3" fill="none" stroke="#2447D8" stroke-width="2"/><text x="400" y="274" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#16224A">Linear algebra problem set</text><text x="400" y="287" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#8F5A00">Due in 4 days</text></svg>
+          </a>
+          <div class="card-text">
+            <h3>StudyKit</h3>
+            <p>A free tool for students. It has a GPA and CGPA calculator with several grading scales, a focus timer, and an assignment tracker. No sign-up, and it works offline.</p>
+            <div class="links"><a href="https://khan02-coder.github.io/studykit/" target="_blank" rel="noopener">View live site</a><a href="https://github.com/khan02-coder/studykit" target="_blank" rel="noopener">View the code</a></div>
           </div>
         </div>
         <div class="card next">
